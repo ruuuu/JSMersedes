@@ -13,8 +13,6 @@ const toggleMenu = () => {
     
 
 
-burger.addEventListener('click', () => {
-  toggleMenu();
-});
+burger.addEventListener('click', toggleMenu); // при клике вызоется функция
 
 

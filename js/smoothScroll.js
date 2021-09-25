@@ -1,7 +1,7 @@
 
 const linksHead = document.querySelectorAll('.menu-list__link'); //псевдомассив сссылок в меню [a, a, a, a]
 const mainScroll = document.querySelectorAll('.main__scroll'); // кнпоа на баннере
-const newArray = [...linksHead,  mainScroll]; //с помощтю spread оператора,  к массиву linksHead добавили ссылку mainScroll, и полуичли новый массив newArray
+const newArray = [...linksHead,  mainScroll]; //с помощтю spread оператора(его брат лизнеу это rest оператор),  к массиву linksHead добавили ссылку mainScroll, и полуичли новый массив newArray
 
 
 
@@ -17,7 +17,7 @@ newArray.forEach((link) => { // перебираем массив ссылок
     //console.log(event.target.getAttribute('href')); // получаем значение атрибута href у нажатого элемента
     const id = event.target.getAttribute('href').substr(1); // метод substr отрезает от строки первый символ(#)
     
-    document.getElementById(id).scrollIntoView({  // скроллим к секции
+    document.getElementById(id).scrollIntoView({  // скроллим к секции, но этот метод scrollIntoView не рабоает в сафари, длэ этогго используют polyfill скрипты
       behavior: 'smooth',
       block: 'start'
     }); // находим жлемнет с указанным id, можно также чрез querySelector

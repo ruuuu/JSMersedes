@@ -24,7 +24,7 @@ form.addEventListener('submit', (event) => { // событе отправки ф
 
     // отправляем даннеы data на этот сервер https://jsonplaceholder.typicode.com/photos методом ГЕТ , метод then отработате тогда, когда получим данные от сервера-response
     fetch('https://jsonplaceholder.typicode.com/photos')
-      .then(response => {
+        .then(response => {
           if(response.status === 200 || response.status === 201){
               return response.json(); // получаем ответ в виже джсон
           }

@@ -1,10 +1,14 @@
-const modalButton = document.querySelector('.more'); // кнпока Узнать больше
+const modalButtons = document.querySelectorAll('.more'); // кнпока Узнать больше
 const modal = document.querySelector('.modal'); //  мод окно
 
 
-modalButton.addEventListener('click', () => {
-    modal.classList.remove('hidden'); // модалка откроется
-});
+modalButtons.forEach((modalBut) => {
+
+    modalBut.addEventListener('click', () => {
+        modal.classList.remove('hidden'); // модалка откроется
+    });
+})
+
 
 // делегирование - вместо того чтоыб вешать обрабочик на все элементы, мы повесили его на их родителя
 modal.addEventListener('click', (event) => {
